@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./3D.css">
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    h2 {
+        color: #f35626;
+        width: 300px;
+        height: 30px;
+        background-color: cadetblue;
+        padding: 5px 20px;
+        /* background-image: linear-gradient(92deg, #f35626 0%, #feab3a 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        /* animation: hue 60s infinite linear; */
+        display: inline-block;
+        
+    }
+
+    /* 动画分析过程
+    1分析动画运动轨迹 运动显现 
+    2 想一下那些css 属性可以实现这样的效果 
+    3 规矩轨迹变化 找到几个特殊的（峰值） 在峰值于峰值之间进行划分
+    4 在每个不同的百分百区间更改属性的值
+    5.如果是渐进式的 值越来越小 知道小到回到最初状态
+    
+    
+    动画运动的轨迹
+    常用的  平移  旋转  拉伸  显示隐藏  透明度
+    */
+    .bac {
+        display: inline-block;
+        width: 336px;
+        height: 76px;
+        padding: 2px 20px;
+        background-color: black;
+    }
+</style>
+
+<body>
+    <h1>展示自己的动画样式</h1>
+    <h2 class="wangxi bounce">bounce弹跳弹跳</h2>
+    <br>
+    <h2 class="wangxi flash  slower ">flash 闪烁动画 </h2>
+    <br>
+    <h2 class="wangxi flasher ">flasher快闪</h2>
+    <br>
+    <h2 class="wangxi pules">pules缩放缩放</h2>
+    <br>
+    <h2 class="wangxi pulesfont">pulesfont放大放大字体</h2>
+    <br>
+    <h2 class=" wangxi rubberBand ">rubberBand伸缩动画</h2>
+    <br>
+    <h2 class="wangxi shake">shake抖一抖</h2>
+    <br>
+    <h2 class="wangxi swing">swing摇一摇</h2>
+    <br>
+    <h2 class="wangxi graduallyPut">graduallyPut渐放</h2>
+    <br>
+    <h2 class="wangxi turntable">turntable 摇晃 转盘</h2>
+    <br>
+    <h2 class="wangxi jello">jello 拉伸</h2>
+    <br>
+    <h2 class="wangxi lightenOutCenter">ligthenOut中间</h2>
+    <br>
+    <h2 class="wangxi lightenOutLeft">ligthenOut左侧</h2>
+    <br>
+    <h2 class="wangxi lightenOutRight">ligthenOut右侧</h2>
+    <br>
+    <div class="bac">
+        <h2 class="wangxi inaugration">inaugurayion开幕式</h2>
+    </div>
+    <br>
+    <h2 class="wangxi inaugrationtop">inaugurayiontop开幕式</h2>
+    <br>
+    <h2 class="wangxi inaugrationbottom">inaugurayionbottom开幕式</h2>
+    <br>
+    <h2 class="wangxi hearbeat fast ">hearbeat心跳</h2>
+    <br>
+    <h2 class="wangxi bounceleft ">bounceleft 左边出来</h2>
+    <br>
+    <h2 class="wangxi bounceright ">bounceright 右边出来</h2>
+    <br>
+    <h2 class="wangxi bouncetop ">bouncetop 上边出来</h2>
+    <br>
+    <h2 class="wangxi bouncebottom ">bouncebottom 上边出来</h2>
+    <br>
+    <h2 class="wangxi bouncein ">bouncein 内部出来</h2>
+    <br>
+    <h2 class="wangxi bounceOut ">bounceOut 捧走</h2>
+    <br>
+    <h2 class="wangxi bounceOutDown ">bounceOutDown 向下掉出 </h2>
+    <br>
+    <h2 class="wangxi bounceOutLeft ">bounceOutLeft 向左掉出 </h2>
+    <br>
+    <h2 class="wangxi bounceOutRight ">bounceOutRight 向右掉出 </h2>
+    <br>
+    <h2 class="wangxi bounceOutUp ">bounceOutUp 向上掉出 </h2>
+    <br>
+    <h2 class="wangxi fadeIn ">fadeIn 慢慢出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInDown ">fadeInDown 从上向下慢慢出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInDownBig ">fadeInDownBig 从上向下匀速达到位置 </h2>
+    <br>
+    <h2 class="wangxi fadeInLeft ">fadeInLeft 从左向右慢慢出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInLeftBig ">fadeInLeftBig 从左向右匀速出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInRight ">fadeInRight 从右向左慢慢出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInRightBig ">fadeInRightBig 从右向左慢慢出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInUp ">fadeInUp 从下向上慢慢出现 </h2>
+    <br>
+    <h2 class="wangxi fadeInUpBig ">fadeInUpBig 从下到上匀速出现 </h2>
+    <br>
+    <h2 class="wangxi fadeOut"> fadeOut 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutDown"> fadeOutDown 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutDownBig"> fadeOutDownBig 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutLeft"> fadeOutLeft 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutLeftBig"> fadeOutLeftBig 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutRight"> fadeOutRight 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutRightBig"> fadeOutRightBig 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi fadeOutUpBig"> fadeOutUpBig 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi flip"> flip 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi flipInX ">flipInX 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi flipInY  ">flipInY  旋转放大 </h2>
+    <br>
+    <h2 class="wangxi flipOutX ">flipOutX 旋转放大 </h2>
+    <br>
+    <h2 class="wangxi flipOutY ">flipOutY 旋转放大 </h2>
+
+</body>
+
+
+</html>
